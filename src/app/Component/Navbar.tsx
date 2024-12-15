@@ -12,7 +12,8 @@ const Navbar = () => {
         { title: 'Blogs', path: '/blogs' },
         { title: 'Services', path: '/services' },
         { title: 'Contact', path: '/contact' },
-        { title: 'Cetagory', path: '/cetagory' }
+        { title: 'Cetagory', path: '/cetagory' },
+        { title: 'Dashboard', path: '/deashboards' }
     ];
 
     const Handelar = () =>{
