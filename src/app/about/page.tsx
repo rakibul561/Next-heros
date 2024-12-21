@@ -64,8 +64,8 @@ const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Image Section */}
-          <div className="flex-1 ml-44">
+          {/* farmer motion use section */}
+          <div className="flex-1 ml-44  ">
            
             <img
               src="https://i.ibb.co/b3zRSCs/profile-removebg-preview.png"
