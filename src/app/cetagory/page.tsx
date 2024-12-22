@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-
+ 
+/* this is a category page  */
 const Cetagorypage = () => {
   return (
     <div className="min-w-7xl border-b-green-600 border border-r-0 border-l-0 border-t-0 text-2xl">
