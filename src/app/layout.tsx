@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Fotter from "./Fotter";
+import MouseTrail from "./Component/HoverAnimation/HoverMe";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,6 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        <Navbar></Navbar>
+        <MouseTrail></MouseTrail>
         {children}
         <footer> 
           <Fotter></Fotter>

@@ -12,17 +12,25 @@ import {
 
 
 import Cetagorypage from "../cetagory/page";
+import DynamicAnimatedText from "../Component/HoverAnimation/Hover";
 
 const Home: React.FC = () => {
 
 
   return (
     <div className="bg-gray-900 text-white min-h-screen">
+
+
+
+      <DynamicAnimatedText text={"about"}></DynamicAnimatedText>
+
+
       <div className="max-w-7xl mx-auto">
         <Cetagorypage />
         <main className="flex flex-col md:flex-row mt-16 px-4 items-center md:items-start gap-8">
           {/* Text Section */}
           <div className="flex-1">
+          <DynamicAnimatedText text={"get to now me"}></DynamicAnimatedText>
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Hello! I am</h1>
             <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
               Rakibul Hasan
@@ -66,7 +74,7 @@ const Home: React.FC = () => {
 
           {/* farmer motion use section */}
           <div className="flex-1 ml-44  ">
-           
+          <DynamicAnimatedText text={"my image"}></DynamicAnimatedText>
             <img
               src="https://i.ibb.co/b3zRSCs/profile-removebg-preview.png"
               alt=""
