@@ -1,5 +1,4 @@
- 'use client'
-
+'use client';
 
 import React, { useState, useEffect } from "react";
 
@@ -29,9 +28,9 @@ const MouseTrail: React.FC = () => {
       <style jsx>{`
         .mouse-trail {
           position: fixed;
-          width: 20px;
-          height: 20px;
-          background: radial-gradient(circle, rgba(0, 255, 0, 0.8) 0%, rgba(0, 255, 0, 0.2) 60%, rgba(0, 255, 0, 0) 100%);
+          width: 40px;
+          height: 40px;
+         background: radial-gradient(circle, rgba(255, 99, 71, 0.8) 0%, rgba(255, 165, 0, 0.4) 60%, rgba(255, 255, 255, 0) 100%);
           border-radius: 50%;
           pointer-events: none; /* Mouse pointer won't be blocked */
           transform: translate(-50%, -50%);
