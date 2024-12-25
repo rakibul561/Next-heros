@@ -14,6 +14,8 @@ import {
 import Cetagorypage from "../cetagory/page";
 import DynamicAnimatedText from "../Component/HoverAnimation/Hover";
 
+import EnterAnimation from "../Component/HoverAnimation/Farmar";
+
 const Home: React.FC = () => {
 
 
@@ -75,11 +77,12 @@ const Home: React.FC = () => {
           {/* farmer motion use section */}
           <div className="flex-1 ml-44  ">
           <DynamicAnimatedText text={"my image"}></DynamicAnimatedText>
-            <img
+            {/* <img
               src="https://i.ibb.co/b3zRSCs/profile-removebg-preview.png"
               alt=""
-              className="h-[500px] bg-white rounded-lg"
-            />
+              className="h-[500px]  bg-white rounded-lg"
+            /> */}
+           <EnterAnimation></EnterAnimation>
             
           </div>
         </main>
