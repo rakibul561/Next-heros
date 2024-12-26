@@ -13,8 +13,11 @@ import {
 
 import Cetagorypage from "../cetagory/page";
 import DynamicAnimatedText from "../Component/HoverAnimation/Hover";
+import { IconCloudDemo } from "../Component/HoverAnimation/Farmar";
 
-import EnterAnimation from "../Component/HoverAnimation/Farmar";
+
+
+
 
 const Home: React.FC = () => {
 
@@ -82,8 +85,8 @@ const Home: React.FC = () => {
               alt=""
               className="h-[500px]  bg-white rounded-lg"
             /> */}
-           <EnterAnimation></EnterAnimation>
-            
+           
+            <IconCloudDemo/>
           </div>
         </main>
       </div>
