@@ -14,7 +14,8 @@ const Navbar = () => {
         { title: 'Contact', path: '/contact' },
         { title: 'Cetagory', path: '/cetagory' },
         { title: 'Post', path: '/post' },
-        { title: 'Dashboard', path: '/deashboards' }
+        { title: 'Meals', path: '/meals' },
+        // { title: 'Dashboard', path: '/deashboards' }
     ];
 
     const Handelar = () =>{
