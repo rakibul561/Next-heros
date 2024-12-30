@@ -35,8 +35,9 @@ const Meals = () => {
   const handaler = (e: { target: { value: React.SetStateAction<string> } }) => {
     setSearch(e.target.value);
   };
- 
-  /*  */
+   
+  // meals data front end 
+   
   return (
     <div className="mt-8 mb-8">
       <input
