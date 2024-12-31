@@ -6,6 +6,7 @@ const page = () => {
         <div>
            <h2> Search your information </h2>
            <p>search meals item ............</p>
+           <p>search meals item ............</p>
            <Meals></Meals>
         </div>
     );
