@@ -14,6 +14,10 @@ import Cetagorypage from "../cetagory/page";
 import DynamicAnimatedText from "../Component/HoverAnimation/Hover";
 import { IconCloudDemo } from "../Component/HoverAnimation/Farmar";
 
+
+ 
+ 
+
 const Home: React.FC = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen">
@@ -56,9 +60,7 @@ const Home: React.FC = () => {
                 <a href="#" className="hover:text-green-500">
                   <FaMedium />
                 </a>
-                <a href="#" className="hover:text-green-500">
-                  <FaFacebook />
-                </a>
+             
                 <a href="#" className="hover:text-green-500">
                   <FaTwitter />
                 </a>
