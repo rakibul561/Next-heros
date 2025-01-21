@@ -54,9 +54,7 @@ const Home: React.FC = () => {
                 <a href="#" className="hover:text-green-500">
                   <FaGithub />
                 </a>
-                <a href="#" className="hover:text-green-500">
-                  <FaGithub />
-                </a>
+               
                 <a href="#" className="hover:text-green-500">
                 <a href="#" className="hover:text-green-500">
                   <FaGithub />
