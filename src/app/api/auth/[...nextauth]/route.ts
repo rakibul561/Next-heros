@@ -16,7 +16,6 @@ const handler = NextAuth({
         if (!credentials || !credentials.email || !credentials.password) {
           return null;
         }
-/*  */
         // উদাহরণস্বরূপ ইউজার যাচাই লজিক (ডাটাবেস ব্যবহার করুন)
         if (credentials.email === "test@example.com" && credentials.password === "password") {
           const user: User = {
