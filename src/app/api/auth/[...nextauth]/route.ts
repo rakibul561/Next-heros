@@ -1,38 +1,52 @@
-import NextAuth, { User } from "next-auth";
-import CredentialProvider from "next-auth/providers/credentials";
+import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 const handler = NextAuth({
   session: {
     strategy: "jwt",
   },
   providers: [
-    CredentialProvider({
+    CredentialsProvider({
       credentials: {
-        email: { label: "Email", type: "text", required: true, placeholder: "your email" },
-        password: { label: "Password", type: "password", required: true, placeholder: "your Password" },
+        email: { label: "Email",
+             type: "text",
+              required: true,
+               placeholder: "your email",},
+
+        password: { label: "Password",
+             required: true,
+              type: "password", 
+               placeholder: "your password" }, 
+
+        // Username: { label: "UserName",
+        //      type: "text",
+        //      required: true,
+        //     name: 'username',
+        //      placeholder: "your Username" ,
+            
+        //     }, 
       },
       async authorize(credentials) {
-        // টাইপ চেক: credentials থাকতে হবে এবং তাতে email এবং password থাকতে হবে
-        if (!credentials || !credentials.email || !credentials.password) {
-          return null;
-        }
-        // উদাহরণস্বরূপ ইউজার যাচাই লজিক (ডাটাবেস ব্যবহার করুন)
-        if (credentials.email === "test@example.com" && credentials.password === "password") {
-          const user: User = {
-            id: "1",
-            name: "John Doe",
-            email: credentials.email,
-          };
-          return user; // সঠিক টাইপ রিটার্ন করা হচ্ছে
+        if (!credentials) {
+          return null; // Return null if no credentials provided
         }
 
-        return null; // যাচাই ব্যর্থ হলে null রিটার্ন
+        // Example: Validate the credentials (replace with actual logic)
+        const { email, password } = credentials;
+
+        // Mock user authentication (replace this with real user validation, e.g., database query)
+        if (email === "admin@example.com" && password === "password123") {
+          return {
+            id: "1", // User ID
+            name: "Admin User", // User's name
+            email: "admin@example.com", // User's email
+          };
+        }
+
+        return null; // Return null for invalid credentials
       },
     }),
   ],
-  pages: {
-    signIn: "/auth/signin", // সাইন-ইন পেজের রুট
-  },
 });
 
-export { handler as POST };
+export { handler as GET, handler as POST };
