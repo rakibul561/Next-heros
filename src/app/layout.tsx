@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Fotter from "./Fotter";
 import MouseTrail from "./Component/HoverAnimation/HoverMe";
+import AuthProviders from "./services/AuthProviders";
 
 
 const geistSans = localFont({
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="p-8">
+       <AuthProviders> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -41,6 +43,7 @@ export default function RootLayout({
           <Fotter></Fotter>
         </footer>
       </body>
+      </AuthProviders>
     </html>
   );
 }

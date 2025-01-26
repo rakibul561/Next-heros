@@ -8,45 +8,29 @@ const handler = NextAuth({
   providers: [
     CredentialsProvider({
       credentials: {
-        email: { label: "Email",
-             type: "text",
-              required: true,
-               placeholder: "your email",},
-
-        password: { label: "Password",
-             required: true,
-              type: "password", 
-               placeholder: "your password" }, 
-
-        // Username: { label: "UserName",
-        //      type: "text",
-        //      required: true,
-        //     name: 'username',
-        //      placeholder: "your Username" ,
-            
-        //     }, 
+        email: { label: "Email", type: "text", placeholder: "your email" },
+        password: { label: "Password", type: "password", placeholder: "your password" },
       },
       async authorize(credentials) {
+        console.log('Credentials received:', credentials); // Debugging log
+
         if (!credentials) {
-          return null; // Return null if no credentials provided
+          return null;
         }
 
-        // Example: Validate the credentials (replace with actual logic)
         const { email, password } = credentials;
 
-        // Mock user authentication (replace this with real user validation, e.g., database query)
+        // Example: Static validation
         if (email === "admin@example.com" && password === "password123") {
-          return {
-            id: "1", // User ID
-            name: "Admin User", // User's name
-            email: "admin@example.com", // User's email
-          };
+          return { id: "1", name: "Admin User", email: "admin@example.com" };
         }
 
         return null; // Return null for invalid credentials
       },
     }),
   ],
+  debug: true, // Enable debugging
 });
 
 export { handler as GET, handler as POST };
+    
