@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
-import Fotter from "./Fotter";
 import MouseTrail from "./Component/HoverAnimation/HoverMe";
 import AuthProviders from "./services/AuthProviders";
-
+import Fotter from "./Fotter";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,9 +19,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default : 'Next Hero',
-    template: '%s | Next Hero'
-  }
+    default: "Next Hero",
+    template: "%s | Next Hero",
+  },
 };
 
 export default function RootLayout({
@@ -31,19 +30,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="p-8">
-       <AuthProviders> 
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased p-8`}
       >
-       <Navbar></Navbar>
-        <MouseTrail></MouseTrail>
-        {children}
-        <footer> 
-          <Fotter></Fotter>
-        </footer>
+        <AuthProviders>
+          <Navbar />
+          <MouseTrail />
+          {children}
+          <footer>
+            <Fotter />
+          </footer>
+        </AuthProviders>
       </body>
-      </AuthProviders>
     </html>
   );
 }
